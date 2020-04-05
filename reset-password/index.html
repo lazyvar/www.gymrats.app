@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
+  </head>
+  <body>
+         <div class="modal" id="password_modal">
+    <div class="modal-header">
+        <h3>Change Password <span class="extra-title muted"></span></h3>
+    </div>
+    <div class="modal-body form-horizontal">
+        <div class="control-group">
+            <label for="new_password" class="control-label">New Password</label>
+            <div class="controls">
+                <input type="password" id="new_password">
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="confirm_password" class="control-label">Confirm Password</label>
+            <div class="controls">
+                <input type="password" id="confirm_password">
+            </div>
+        </div>      
+    </div>
+    <div class="modal-footer">
+        <button href="#" class="btn btn-primary" id="password_modal_save" onclick="go();">Submit</button>
+    </div>
+</div>
+    
+      <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+      
+    <script>
+    
+        $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}
+        function complete(response) {
+            if (response.status == 200) {
+                var r = JSON.parse(response.responseText)
+
+                if (r.status == "success") {
+                    alert("Success!")
+                } else {
+                    alert(r.error_message)
+                }
+            } else {
+                alert("Something went horribly wrong. Please try again")
+            }
+        }
+        
+        function go() {
+            var token = $.urlParam('token'); // name
+            
+            if (token == null || token == undefined) {
+                return;
+            }
+                        
+            var newPassword = $('#new_password').val();
+            var confirmPassword = $('#confirm_password').val();
+            
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            } else if (newPassword.length < 6) {
+                alert("Password must be at least 6 characters");
+                return;
+            }
+            
+            var url = "https://gym-rats-api.herokuapp.com/reset-password";
+            
+            var params = {
+                token: token,
+                password: newPassword,
+                confirmPassword: confirmPassword
+            };
+            
+            $.ajax({
+                url: url,
+                type: "PUT",
+                data: JSON.stringify(params),
+                contentType: "application/json",
+                complete: complete
+            });
+        }
+    </script>
+  </body>
+</html>
