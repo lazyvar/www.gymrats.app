@@ -1,12 +1,15 @@
 body {
   font-family: 'Nunito';
   background: rgb(247, 247, 247);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .container {
   display: grid;
   margin: auto;
-  max-width: 1170px;
+  max-width: 1380px;
   padding-left: 15px;
   padding-right: 15px;
   grid-template-columns: repeat(12, 1fr);
@@ -29,15 +32,71 @@ body {
   }
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.85);
+.app-store {
+  height: 75px;
+}
+
+p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -.562737px;
+  margin-bottom: 15px;
+}
+
+.hero {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-image {
+  width: 87%;
+  left: 10%;
+  position: relative;
+}
+
+.col-2 {
+  width: 50%;
+  margin: auto;
+}
+
+section {
+  display: block;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -1px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  border: 0;
+}
+
+.section-content {
+  display: flex;
+  max-width: 1380px;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 100px;
+  text-align: left;
 }
 
 .logo {
   height: 32px;
+  top: 4px;
+  position: relative;
 }
 
 .nav {
