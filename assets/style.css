@@ -175,6 +175,7 @@ h1 {
     padding: 0 100px;
   }  
 }
+
 .section-content {
   display: flex;
   max-width: 1380px;
@@ -303,6 +304,11 @@ button {
   padding: 0
 }
 
+.screenshots {
+  background-color: #D33A2C;
+  height: 800px;
+}
+
 .features {
   grid-area: c;
   display: flex;
@@ -311,7 +317,7 @@ button {
   justify-content: flex-start;
   flex-grow: 1;
   flex-wrap: wrap;
-  margin-top: 93px
+  margin-top: 40px;
 }
 
 .feature {
@@ -428,6 +434,46 @@ button {
   .feature:nth-child(3n+1) {
     padding-left: 0px
   }
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    padding: 24px 20px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  footer {
+    max-width: 1380px;
+    padding: 24px 80px;
+    margin: 20px auto;
+  }
+}
+
+footer {
+  width: 100%;
+}
+
+.borda {
+  border-top: 1px solid #666;
+  margin-bottom: 20px;
+}
+
+.flexible {
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flexible a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
 }
 
 .hidden {
