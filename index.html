@@ -25,29 +25,33 @@
   <meta charset="UTF-8">
   <link rel="icon" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=1453444814">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <script src="assets/menu.js"></script>
   <title>GymRats: Group challenge</title>
 </head>
 
 <body>
   <div class="nav">
     <a href="/"><img class="logo" src="/assets/logo.png"></a>
-    <div class="nav-links">
+    <div class="nav-links" id="links">
       <a href="/about">About</a>
       <a href="/faq">FAQ</a>
       <a href="/news">News</a>
-      <a href="/analytics">Analytics</a>
       <a href="/contact">Contact</a>
       <a href="/download" class="download">Download</a>
     </div>
+    <button class="hamburgler" onclick="showMenu()">
+      <i class="fas fa-bars hide-big toggle-mobile-menu" style="font-size:20px" id="ham"></i>
+    </button>
   </div> 
   <div style="margin: 0 auto;">
     <main>
       <section>
         <div class="section-content">
-          <div class="col-2 small-order-2" style="position: relative; top: -60px;">
+          <div class="col-2 small-order-1 copy" style="position: relative;">
             <h1>Get to the gym,<br>become a rat.</h1>
             <p class="hero-text">
               Band together to improve your fitness by competing in a group challenge. Enlist friends, family, teammates, colleagues, or whoever, to become gym rats.
@@ -55,11 +59,11 @@
             <p class="hero-text">
               GymRats integrates with the Apple watch and Google heath app. Boo yah! Isn’t that wonderful? I think so.
             </p>
-            <div style="margin-top: 56px;">
+            <div class="buttons">
               <a href="https://apps.apple.com/us/app/gymrats-group-challenge/id1453444814?uo=4">
                 <img class="app-store" src="assets/app-store.png">
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.hasz.gymrats.app" style="margin-left: 32px;">
+              <a href="https://play.google.com/store/apps/details?id=com.hasz.gymrats.app">
                 <img class="app-store" src="assets/google-play.png">
               </a>
             </div>
