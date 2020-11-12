@@ -105,6 +105,23 @@ body {
   }
 }
 
+.photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0 40px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.photos img {
+  height: 222px;
+  border-radius: 8px;
+  flex: 1 1 auto;
+  margin: 10px
+}
+
 @media screen and (max-width: 900px) {
   .app-store {
     height: 60px;
@@ -197,7 +214,7 @@ h2 {
   margin: auto;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   text-align: left;
 }
