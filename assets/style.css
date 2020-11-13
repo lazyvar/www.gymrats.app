@@ -521,3 +521,46 @@ footer {
 .hidden {
   display: none
 }
+
+.contact-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-card {
+  color: rgba(0, 0 , 0, .85);
+}
+
+.qr-code {
+  width: 180px;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-card {
+    margin: 0 8px;
+  }
+}
+
+.no-flex-zone {
+  display: block !important;
+}
