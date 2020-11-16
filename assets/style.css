@@ -564,3 +564,69 @@ footer {
 .no-flex-zone {
   display: block !important;
 }
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.faq-section {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  width: auto;
+  margin-bottom: 16px;
+  transition: 0.25s;
+}
+
+.open h3:after {
+  content: "\f068" !important;
+}
+
+.faq-section h3:after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  float: right;
+  margin-left: 50px;
+  margin-top: 3px;
+  content: "\f067";
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+.some-content {
+  display: flex;
+  max-width: 1380px;
+  margin: auto;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.faq-content {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .some-content {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .some-content {
+    padding: 0 80px;
+  }
+}
+
+.faq-content a {
+  color: #D33A2C;
+}
