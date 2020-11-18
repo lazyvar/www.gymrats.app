@@ -35,6 +35,7 @@ body {
 .buttons {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .buttons a {
@@ -124,7 +125,7 @@ body {
 
 @media screen and (max-width: 900px) {
   .app-store {
-    height: 60px;
+    height: 75px;
   }
 }
 
@@ -338,7 +339,34 @@ button {
 
 .screenshots {
   background-color: #D33A2C;
-  height: 800px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 80px;
+}
+
+.screenshot-section h3 {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.iphone {
+  background-image: url("/assets/iphone.png");
+  background-size: 322px auto;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.screenshot {
+  width: 275px;
+  -webkit-clip-path: url(#screenMask);
+  clip-path: url(#screenMask);
+  margin-left: 26px;
+  margin-top: 23px;
+  margin-right: 26px;
+  margin-bottom: 23px;
 }
 
 .features {
@@ -407,7 +435,7 @@ button {
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 11px
+    margin-top: 30px;
   }
 
   .feature {
