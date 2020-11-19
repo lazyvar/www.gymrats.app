@@ -68,6 +68,12 @@ body {
   }
 }
 
+.hero-image {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 100px;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 900px) {
   .copy {
     top: 0px;
@@ -153,15 +159,9 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 1200px) {
-  section {
-    padding-top: 20px;
-  }
-}
-
 @media only screen and (min-width: 1201px) {
-  section {
-    padding-top: 30px;
+  .ok {
+    padding-top: 70px;
   }  
 }
 
@@ -652,6 +652,12 @@ h4 {
 @media only screen and (min-width: 1201px) {
   .some-content {
     padding: 0 80px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .screenshots {
+    margin-top: 100px;
   }
 }
 
