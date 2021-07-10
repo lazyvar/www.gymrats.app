@@ -34,12 +34,11 @@ body {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.buttons a {
-  margin: 5px auto;
+.hero-text {
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -56,9 +55,10 @@ body {
 
 @media screen and (max-width: 900px) {
   .hero-image {
-    margin-top: 30px;
-    width: 90%;
     position: relative;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
   }
   .copy {
     top: 0px;
@@ -195,7 +195,7 @@ h1 {
 
 @media only screen and (max-width: 1200px) {
   .section-content {
-    padding: 0 20px;
+    padding: 20px 20px 0px 20px;
   }
 }
 
@@ -353,20 +353,20 @@ button {
 
 .iphone {
   background-image: url("/assets/iphone.png");
-  background-size: 322px auto;
+  background-size: 265px auto;
   background-repeat: no-repeat;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .screenshot {
-  width: 275px;
+  width: 225px;
   -webkit-clip-path: url(#screenMask);
   clip-path: url(#screenMask);
-  margin-left: 26px;
-  margin-top: 23px;
-  margin-right: 26px;
-  margin-bottom: 23px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .features {
@@ -652,12 +652,6 @@ h4 {
 @media only screen and (min-width: 1201px) {
   .some-content {
     padding: 0 80px;
-  }
-}
-
-@media only screen and (min-width: 1201px) {
-  .screenshots {
-    margin-top: 100px;
   }
 }
 
